@@ -24,7 +24,7 @@ Specific enough that the right person immediately knew if it fit.
 
 ## Where the clients actually came from
 
-- **Client 1** — a former colleague who saw my [first post](/why-i-am-starting-a-marketing-consultancy)
+- **Client 1** — a former colleague who saw my [first post](/finding-my-first-business-idea)
   and forwarded it to a friend. Warm intro, closed in two calls.
 - **Client 2** — someone who found an early version of this site by
   searching a very long, very specific phrase. That's the SEO bet paying
