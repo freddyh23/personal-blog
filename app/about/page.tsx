@@ -9,6 +9,27 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 }
 
+const credentials = [
+  {
+    name: "Google Ads Display Certification",
+    issuer: "Google Skillshop",
+    issueDate: "2026-08-26",
+    expiryDate: "2027-08-26",
+    verifyUrl:
+      "https://skillshop.credential.net/ceabe7d7-4e3a-4bd1-8337-b8044e8cc51d",
+    badge: "/badges/google-ads-display-badge.png",
+  },
+]
+
+function formatCredentialDate(iso: string) {
+  return new Date(iso).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  })
+}
+
 const highlights = [
   {
     name: "The tasks",
@@ -50,6 +71,49 @@ export default function AboutPage() {
           using these pages as a live lab to learn search and analytics along
           the way.
         </p>
+      </div>
+
+      <section className="mt-10">
+        <h2 className="font-mono text-xs font-medium uppercase tracking-widest text-muted-foreground">
+          Credentials
+        </h2>
+        <div className="mt-4 grid gap-4">
+          {credentials.map((credential) => (
+            <div
+              key={credential.name}
+              className="flex items-center gap-4 rounded-lg border border-border bg-card p-5"
+            >
+              <img
+                src={credential.badge}
+                alt={`${credential.name} badge`}
+                width={64}
+                height={64}
+                className="h-16 w-16 shrink-0"
+              />
+              <div className="min-w-0">
+                <p className="font-display text-base font-semibold tracking-tight">
+                  {credential.name}
+                </p>
+                <p className="mt-1 font-mono text-xs text-muted-foreground">
+                  {credential.issuer} · Issued{" "}
+                  {formatCredentialDate(credential.issueDate)} · Expires{" "}
+                  {formatCredentialDate(credential.expiryDate)}
+                </p>
+                <a
+                  href={credential.verifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-sm font-medium text-primary underline underline-offset-4 decoration-primary/40 hover:decoration-primary"
+                >
+                  Verify credential &rarr;
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="prose mt-10">
         <h2>What this site covers</h2>
       </div>
 
