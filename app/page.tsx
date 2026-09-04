@@ -11,10 +11,10 @@ export default function HomePage() {
     <main className="mx-auto max-w-3xl px-6">
       {/* Hero */}
       <section className="pt-16 pb-12 sm:pt-24">
-        <p className="text-sm font-medium uppercase tracking-widest text-primary">
+        <p className="font-mono text-sm font-medium uppercase tracking-widest text-primary">
           A journal, in public
         </p>
-        <h1 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-balance sm:text-5xl">
+        <h1 className="mt-4 font-display text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl">
           {siteConfig.tagline}
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty">
@@ -43,7 +43,7 @@ export default function HomePage() {
         <section aria-labelledby="latest-heading" className="py-8">
           <h2
             id="latest-heading"
-            className="text-xs font-medium uppercase tracking-widest text-muted-foreground"
+            className="font-mono text-xs font-medium uppercase tracking-widest text-muted-foreground"
           >
             Latest entry
           </h2>
@@ -51,12 +51,12 @@ export default function HomePage() {
             href={`/blog/${latest.slug}`}
             className="group mt-4 block rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary/40"
           >
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs text-muted-foreground">
               <time dateTime={latest.date}>{formatDate(latest.date)}</time>
               <span aria-hidden="true">&middot;</span>
               <span>{latest.readingTime} min read</span>
             </div>
-            <h3 className="mt-2 font-serif text-2xl font-medium tracking-tight text-balance transition-colors group-hover:text-primary">
+            <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight text-balance transition-colors group-hover:text-primary">
               {latest.title}
             </h3>
             <p className="mt-3 leading-relaxed text-muted-foreground text-pretty">
@@ -74,7 +74,7 @@ export default function HomePage() {
         <section aria-labelledby="more-heading" className="py-8">
           <h2
             id="more-heading"
-            className="text-xs font-medium uppercase tracking-widest text-muted-foreground"
+            className="font-mono text-xs font-medium uppercase tracking-widest text-muted-foreground"
           >
             More from the journal
           </h2>

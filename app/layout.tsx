@@ -1,21 +1,32 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Inter, Fraunces } from 'next/font/google'
+import { Source_Sans_3, IBM_Plex_Sans, JetBrains_Mono } from 'next/font/google'
 import { GoogleAnalytics } from '@/components/google-analytics'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { siteConfig } from '@/lib/site-config'
 import './globals.css'
 
-const inter = Inter({
+// Body text.
+const sourceSans = Source_Sans_3({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-source-sans',
   display: 'swap',
 })
 
-const fraunces = Fraunces({
+// Headlines — bold, technical, precise (the "Blueprint" identity).
+const plexSans = IBM_Plex_Sans({
   subsets: ['latin'],
-  variable: '--font-fraunces',
+  weight: ['500', '600', '700'],
+  variable: '--font-plex-sans',
+  display: 'swap',
+})
+
+// Dates, tags, and eyebrow labels — a schematic/annotation feel.
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-jetbrains-mono',
   display: 'swap',
 })
 
@@ -65,7 +76,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#f7f5ef',
+  themeColor: '#f3f6fa',
 }
 
 export default function RootLayout({
@@ -74,7 +85,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable} bg-background`}>
+    <html
+      lang="en"
+      className={`${sourceSans.variable} ${plexSans.variable} ${jetbrainsMono.variable} bg-background`}
+    >
       <body className="font-sans antialiased">
         <div className="flex min-h-dvh flex-col">
           <SiteHeader />

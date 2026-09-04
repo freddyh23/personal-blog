@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className="mt-24 border-t border-border/70">
       <div className="mx-auto flex max-w-3xl flex-col gap-6 px-6 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="font-serif text-base font-medium">{siteConfig.name}</p>
+          <p className="font-display text-base font-semibold">{siteConfig.name}</p>
           <p className="mt-1 text-sm text-muted-foreground">
             {siteConfig.tagline}
           </p>

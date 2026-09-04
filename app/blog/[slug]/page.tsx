@@ -92,14 +92,14 @@ export default async function PostPage({
 
       <article>
         <header className="border-b border-border pb-8">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-sm text-muted-foreground">
             <time dateTime={post.date}>{formatDate(post.date)}</time>
             <span aria-hidden="true">&middot;</span>
             <span>{post.readingTime} min read</span>
             <span aria-hidden="true">&middot;</span>
             <span>By {post.author ?? siteConfig.name}</span>
           </div>
-          <h1 className="mt-4 font-serif text-4xl font-medium leading-tight tracking-tight text-balance">
+          <h1 className="mt-4 font-display text-4xl font-semibold leading-tight tracking-tight text-balance">
             {post.title}
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground text-pretty">
@@ -110,7 +110,7 @@ export default async function PostPage({
               {post.tags.map((tag) => (
                 <li
                   key={tag}
-                  className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
+                  className="rounded-full bg-secondary px-3 py-1 font-mono text-xs font-medium text-secondary-foreground"
                 >
                   {tag}
                 </li>
@@ -127,7 +127,7 @@ export default async function PostPage({
       </article>
 
       <div className="mt-16 border-t border-border pt-8">
-        <p className="font-serif text-lg font-medium">
+        <p className="font-display text-lg font-semibold">
           Building something similar?
         </p>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-pretty">

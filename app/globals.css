@@ -5,8 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,41 +50,41 @@
 
 :root {
   color-scheme: light;
-  /* Warm paper background + ink text, with a confident evergreen accent
-     (growth, "Northbound"). 4 core colors: paper, ink, evergreen, and
-     muted stone — kept intentionally restrained. */
-  --background: oklch(0.985 0.006 95);
-  --foreground: oklch(0.22 0.012 260);
-  --card: oklch(0.995 0.004 95);
-  --card-foreground: oklch(0.22 0.012 260);
-  --popover: oklch(0.995 0.004 95);
-  --popover-foreground: oklch(0.22 0.012 260);
-  --primary: oklch(0.46 0.096 158);
-  --primary-foreground: oklch(0.985 0.006 95);
-  --secondary: oklch(0.955 0.008 95);
-  --secondary-foreground: oklch(0.28 0.02 158);
-  --muted: oklch(0.955 0.008 95);
-  --muted-foreground: oklch(0.5 0.015 260);
-  --accent: oklch(0.93 0.03 158);
-  --accent-foreground: oklch(0.32 0.05 158);
+  /* "Blueprint": pale schematic-blue ground, deep navy ink, and a single
+     compiler-orange accent — the software-engineering background applied
+     to a new craft. Sharp corners, no decoration. */
+  --background: #f3f6fa;
+  --foreground: #12233d;
+  --card: #ffffff;
+  --card-foreground: #12233d;
+  --popover: #ffffff;
+  --popover-foreground: #12233d;
+  --primary: #d1571f;
+  --primary-foreground: #ffffff;
+  --secondary: #e8eef6;
+  --secondary-foreground: #12233d;
+  --muted: #e8eef6;
+  --muted-foreground: #5c7290;
+  --accent: #fbe4d6;
+  --accent-foreground: #7a3a14;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.9 0.01 95);
-  --input: oklch(0.9 0.01 95);
-  --ring: oklch(0.46 0.096 158);
-  --chart-1: oklch(0.46 0.096 158);
-  --chart-2: oklch(0.6 0.08 158);
-  --chart-3: oklch(0.7 0.06 158);
-  --chart-4: oklch(0.5 0.015 260);
-  --chart-5: oklch(0.8 0.02 95);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.985 0.006 95);
-  --sidebar-foreground: oklch(0.22 0.012 260);
-  --sidebar-primary: oklch(0.46 0.096 158);
-  --sidebar-primary-foreground: oklch(0.985 0.006 95);
-  --sidebar-accent: oklch(0.93 0.03 158);
-  --sidebar-accent-foreground: oklch(0.32 0.05 158);
-  --sidebar-border: oklch(0.9 0.01 95);
-  --sidebar-ring: oklch(0.46 0.096 158);
+  --border: #d7e1ec;
+  --input: #d7e1ec;
+  --ring: #d1571f;
+  --chart-1: #d1571f;
+  --chart-2: #12233d;
+  --chart-3: #5c7290;
+  --chart-4: #a7bcd6;
+  --chart-5: #f2a26b;
+  --radius: 0rem;
+  --sidebar: #f3f6fa;
+  --sidebar-foreground: #12233d;
+  --sidebar-primary: #d1571f;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #fbe4d6;
+  --sidebar-accent-foreground: #7a3a14;
+  --sidebar-border: #d7e1ec;
+  --sidebar-ring: #d1571f;
 }
 
 .dark {
@@ -138,10 +139,10 @@
   @apply mt-6;
 }
 .prose h2 {
-  @apply font-serif text-2xl font-medium tracking-tight text-foreground mt-12 mb-0;
+  @apply font-display text-2xl font-semibold tracking-tight text-foreground mt-12 mb-0;
 }
 .prose h3 {
-  @apply font-serif text-xl font-medium tracking-tight text-foreground mt-10 mb-0;
+  @apply font-display text-xl font-semibold tracking-tight text-foreground mt-10 mb-0;
 }
 .prose p {
   @apply text-pretty;
@@ -165,5 +166,5 @@
   @apply border-l-2 border-primary pl-4 italic text-muted-foreground;
 }
 .prose code {
-  @apply rounded bg-muted px-1.5 py-0.5 font-mono text-[0.9em];
+  @apply rounded-none bg-muted px-1.5 py-0.5 font-mono text-[0.9em];
 }

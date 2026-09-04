@@ -31,10 +31,10 @@ export default function AboutPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
       <header>
-        <p className="text-sm font-medium uppercase tracking-widest text-primary">
+        <p className="font-mono text-sm font-medium uppercase tracking-widest text-primary">
           About
         </p>
-        <h1 className="mt-4 font-serif text-4xl font-medium tracking-tight text-balance sm:text-5xl">
+        <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
           Hi, I&apos;m {siteConfig.name}
         </h1>
       </header>
@@ -59,7 +59,7 @@ export default function AboutPage() {
             key={highlight.name}
             className="rounded-lg border border-border bg-card p-5"
           >
-            <h3 className="font-serif text-lg font-medium tracking-tight">
+            <h3 className="font-display text-lg font-semibold tracking-tight">
               {highlight.name}
             </h3>
             <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground text-pretty">
@@ -70,7 +70,7 @@ export default function AboutPage() {
       </div>
 
       <section className="mt-12 rounded-lg border border-primary/30 bg-accent/40 p-6">
-        <h2 className="font-serif text-xl font-medium tracking-tight">
+        <h2 className="font-display text-xl font-semibold tracking-tight">
           Want to follow along?
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-pretty">

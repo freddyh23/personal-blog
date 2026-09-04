@@ -7,7 +7,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-3xl items-center justify-between gap-4 px-6">
         <Link
           href="/"
-          className="flex items-center gap-2 font-serif text-lg font-medium tracking-tight"
+          className="flex items-center gap-2 font-display text-lg font-semibold tracking-tight"
         >
           <span
             aria-hidden="true"

@@ -15,10 +15,10 @@ export default function BlogIndexPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
       <header>
-        <p className="text-sm font-medium uppercase tracking-widest text-primary">
+        <p className="font-mono text-sm font-medium uppercase tracking-widest text-primary">
           The journal
         </p>
-        <h1 className="mt-4 font-serif text-4xl font-medium tracking-tight text-balance sm:text-5xl">
+        <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
           Building a business, one entry at a time
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty">
@@ -31,7 +31,7 @@ export default function BlogIndexPage() {
         {posts.length === 0 ? (
           <p className="text-muted-foreground">
             No posts yet. Add a Markdown file to{" "}
-            <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-sm">
+            <code className="rounded-none bg-muted px-1.5 py-0.5 font-mono text-sm">
               content/blog
             </code>{" "}
             to publish your first entry.
