@@ -31,6 +31,26 @@ export function SiteFooter() {
                 Email
               </a>
             </li>
+            <li>
+              <a
+                href={siteConfig.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-foreground"
+              >
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a
+                href={siteConfig.social.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-foreground"
+              >
+                YouTube
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

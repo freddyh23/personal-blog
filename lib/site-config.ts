@@ -34,8 +34,8 @@ export const siteConfig = {
 
   social: {
     email: "hello@your-domain.com",
-    linkedin: "https://www.linkedin.com/in/your-handle",
-    x: "https://x.com/your-handle",
+    facebook: "https://www.facebook.com/profile.php?id=100054168878649",
+    youtube: "https://www.youtube.com/@FreddyHernandez-x6q",
   },
 } as const
 
