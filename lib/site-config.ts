@@ -33,7 +33,7 @@ export const siteConfig = {
   ],
 
   social: {
-    email: "hello@your-domain.com",
+    email: "freddyh1125@gmail.com",
     facebook: "https://www.facebook.com/profile.php?id=100054168878649",
     youtube: "https://www.youtube.com/@FreddyHernandez-x6q",
   },
