@@ -68,9 +68,13 @@ export function getPostBySlug(slug: string): Post | null {
 }
 
 export function formatDate(iso: string): string {
+  // Post dates are plain "YYYY-MM-DD" strings, which JS parses as UTC
+  // midnight. Formatting in UTC too keeps the displayed date matching
+  // what's in the frontmatter, regardless of the reader's timezone.
   return new Date(iso).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "UTC",
   })
 }

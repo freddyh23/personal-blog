@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { getAllPosts } from "@/lib/blog"
+import { getAllPosts, formatDate } from "@/lib/blog"
 import { siteConfig } from "@/lib/site-config"
 import { PostCard } from "@/components/post-card"
 
@@ -52,13 +52,7 @@ export default function HomePage() {
             className="group mt-4 block rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary/40"
           >
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
-              <time dateTime={latest.date}>
-                {new Date(latest.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </time>
+              <time dateTime={latest.date}>{formatDate(latest.date)}</time>
               <span aria-hidden="true">&middot;</span>
               <span>{latest.readingTime} min read</span>
             </div>

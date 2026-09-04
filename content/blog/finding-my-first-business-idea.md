@@ -1,7 +1,7 @@
 ---
 title: "Finding My First Business Idea"
 description: "How I went from leaving my job at Google with no clear direction to landing on digital marketing as my way into entrepreneurship."
-date: "2026-01-06"
+date: "2026-09-03"
 author: "Freddy Hernandez"
 tags: ["founding", "career-change", "building-in-public"]
 ---
