@@ -70,7 +70,7 @@ Your content here. Use normal Markdown:
 ## A heading
 
 - bullet points
-- [links to other posts](/blog/finding-my-first-clients)
+- [links to other posts](/blog/finding-my-first-business-idea)
 
 Regular paragraphs, **bold**, _italic_, and so on.
 ```
