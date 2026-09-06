@@ -1,5 +1,8 @@
+"use client"
+
 import Link from "next/link"
 import { siteConfig } from "@/lib/site-config"
+import { trackEvent } from "@/lib/analytics"
 
 export function SiteFooter() {
   return (
@@ -36,6 +39,7 @@ export function SiteFooter() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("social_click", { platform: "facebook" })}
                 className="transition-colors hover:text-foreground"
               >
                 Facebook
@@ -46,6 +50,7 @@ export function SiteFooter() {
                 href={siteConfig.social.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("social_click", { platform: "youtube" })}
                 className="transition-colors hover:text-foreground"
               >
                 YouTube
