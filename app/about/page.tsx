@@ -21,13 +21,22 @@ const credentials = [
   },
 ]
 
-function formatCredentialDate(iso: string) {
+function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
     timeZone: "UTC",
   })
+}
+
+const weeklyFocus = {
+  weekOf: "2026-09-06",
+  tasks: [
+    "Stack up my No's for the week — get 20 No's from strangers.",
+    "Track my dedicated work hours to hit 6 real hours of work by the end of the week, not just clock time.",
+    "Finish the GA4 Certification.",
+  ],
 }
 
 const highlights = [
@@ -73,6 +82,30 @@ export default function AboutPage() {
         </p>
       </div>
 
+      <section className="mt-10 rounded-lg border border-primary/30 bg-accent/40 p-6">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+          <h2 className="font-display text-lg font-semibold tracking-tight">
+            This week&apos;s focus
+          </h2>
+          <span className="font-mono text-xs text-muted-foreground">
+            Week of {formatDate(weeklyFocus.weekOf)}
+          </span>
+        </div>
+        <ul className="mt-4 space-y-2.5">
+          {weeklyFocus.tasks.map((task) => (
+            <li
+              key={task}
+              className="flex gap-2.5 text-sm leading-relaxed text-foreground/90 text-pretty"
+            >
+              <span aria-hidden="true" className="text-primary">
+                &rarr;
+              </span>
+              <span>{task}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section className="mt-10">
         <h2 className="font-mono text-xs font-medium uppercase tracking-widest text-muted-foreground">
           Credentials
@@ -96,8 +129,8 @@ export default function AboutPage() {
                 </p>
                 <p className="mt-1 font-mono text-xs text-muted-foreground">
                   {credential.issuer} · Issued{" "}
-                  {formatCredentialDate(credential.issueDate)} · Expires{" "}
-                  {formatCredentialDate(credential.expiryDate)}
+                  {formatDate(credential.issueDate)} · Expires{" "}
+                  {formatDate(credential.expiryDate)}
                 </p>
                 <a
                   href={credential.verifyUrl}
