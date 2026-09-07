@@ -34,7 +34,7 @@ const weeklyFocus = {
   weekOf: "2026-09-06",
   tasks: [
     "Stack up my No's for the week — get 20 No's from strangers.",
-    "Track my dedicated work hours to hit 6 real hours of work by the end of the week, not just clock time.",
+    "Track my dedicated work hours to hit 6 real hours of work each day, not just clock time.",
     "Finish the GA4 Certification.",
   ],
 }
